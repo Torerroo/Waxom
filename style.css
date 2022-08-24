@@ -592,7 +592,6 @@ a {
             flex-wrap: wrap;
             justify-content: center;
         }
-        
             .menu__button button {
                 width: 120px;
                 height: 32px;
@@ -623,14 +622,16 @@ a {
             flex-wrap: wrap;
             justify-content: center;    
             gap: 30px;
+            position: relative;
+        }
+        .project-item {
+            position: relative;
         }
                 .project-item__img {
                     position: relative;  
-                    z-index: 2;
-                   
+                    z-index: 2; 
                 }
-                .project-item__img:after {
-                    content: "";
+                .project-item__img-black {
                     position: absolute;
                     z-index: 1;
                     top: 0;
@@ -638,33 +639,29 @@ a {
                     width: 370px;
                     height: 237px;
                     background-color: rgba(17,17,17,0.7);
-                    visibility: hidden;
-                    
+                    display: none;
                 }
-                .project-item:hover .project-item__img:after {
-                    visibility: visible;     
-                    z-index: 1;              
+                .project-item:hover .project-item__img-black {
+                    display: block;
                 }
                 .project-item:hover .project-item__exposition {
                     background-color: #362f2d;
                 }
-
                 .project-item__img img {
                     display: block; 
                 }
                 .project-item__img-icons {
                     position: absolute;
                     display: none;
-                    z-index: 2;
+                    z-index: 10;
                     gap: 25px;
-                    bottom: 44%;
-                    left: 39.7%;                   
+                    bottom: 54%;
+                    left: 40%;                   
                 }
-               
                 .project-item:hover .project-item__img-icons {
                     display: flex;
                 }
-                .project-item:hover .project-item__title a {
+                .project-item:hover .project-item__title {
                     color: #ffffff;
                 }
                 .project-item:hover .project-item__subtitle {
@@ -679,7 +676,7 @@ a {
                     background-color: #fbfaf8;
                     padding-left: 25px;
                 }
-                    .project-item__title a {                        
+                    .project-item__title {                        
                         font-family: Raleway;
                         font-size: 20px;
                         line-height: 1.2;
